@@ -1,6 +1,6 @@
 # Go Daily Coding Problem
 
-Answers for [Daily Coding Problem](https://www.dailycodingproblem.com/ "Daily Coding Problem") written in Go
+Solutions for [Daily Coding Problem](https://www.dailycodingproblem.com/ "Daily Coding Problem") written in Go
 
 ## Requirements
 
@@ -8,4 +8,12 @@ Answers for [Daily Coding Problem](https://www.dailycodingproblem.com/ "Daily Co
 
 ## Getting Started
 
-To Be Written
+Run `go test` to test the solutions.
+```bash
+# example
+go test ./problem1
+```
+
+## Problems
+
+[#1](problem1)
