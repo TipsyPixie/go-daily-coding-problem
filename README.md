@@ -19,6 +19,6 @@ go test ./problem1
 ## Problems
 
 * EASY
-    * #1
+    * [#1](problem1)
 * HARD
-    * #2
+    * [#2](problem2)
