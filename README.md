@@ -1,6 +1,6 @@
 # Go Daily Coding Problem
 
-Solutions for [Daily Coding Problem](https://www.dailycodingproblem.com/ "Daily Coding Problem") written in Go
+Solutions for [Daily Coding Problem](https://www.dailycodingproblem.com/ "Daily Coding Problem"), written in Go
 
 ## Requirements
 
