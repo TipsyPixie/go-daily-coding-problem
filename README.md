@@ -1,5 +1,7 @@
 # Go Daily Coding Problem
 
+[![Actions Status](https://github.com/TipsyPixie/go-daily-coding-problem/workflows/go/badge.svg)](https://https://github.com/TipsyPixie/go-daily-coding-problem/actions)
+
 Solutions for [Daily Coding Problem](https://www.dailycodingproblem.com/ "Daily Coding Problem"), written in Go
 
 ## Requirements
