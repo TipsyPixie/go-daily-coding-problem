@@ -2,22 +2,20 @@ package problem2
 
 func Run(numbers []int) (result []int) {
     length := len(numbers)
-    lefties := make([]int, length, length)
-    lefties[0] = 1
-    righties := make([]int, length, length)
-    righties[length - 1] = 1
+    result = make([]int, length, length)
+    result[0] = 1
+    sidekicks := make([]int, length, length)
+    sidekicks[length-1] = 1
 
     for index, _ := range numbers {
         if index > 0 {
-            lefties[index] = lefties[index - 1] * numbers[index - 1]
+            result[index] = result[index-1] * numbers[index-1]
             reversedIndex := length - 1 - index
-            righties[reversedIndex] = righties[reversedIndex + 1] * numbers[reversedIndex + 1]
+            sidekicks[reversedIndex] = sidekicks[reversedIndex+1] * numbers[reversedIndex+1]
         }
     }
-
-    result = make([]int, length, length)
-    for index, _ := range lefties {
-        result[index] = lefties[index] * righties[index]
+    for index, _ := range result {
+        result[index] *= sidekicks[index]
     }
     return
 }
