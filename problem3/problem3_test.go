@@ -24,5 +24,6 @@ func TestNode_SerializeSimple(t *testing.T) {
         }
     } else {
         t.Log(err)
+        t.Fail()
     }
 }
