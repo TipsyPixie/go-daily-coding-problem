@@ -3,14 +3,15 @@ package problem2
 func Run(numbers []int) (result []int) {
     length := len(numbers)
     result = make([]int, length, length)
-    result[0] = 1
     sidekicks := make([]int, length, length)
-    sidekicks[length-1] = 1
 
     for index, _ := range numbers {
-        if index > 0 {
+        reversedIndex := length - 1 - index
+        if index == 0 {
+            result[index] = 1
+            sidekicks[reversedIndex] = 1
+        } else {
             result[index] = result[index-1] * numbers[index-1]
-            reversedIndex := length - 1 - index
             sidekicks[reversedIndex] = sidekicks[reversedIndex+1] * numbers[reversedIndex+1]
         }
     }
