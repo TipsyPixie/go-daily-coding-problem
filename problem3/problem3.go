@@ -15,8 +15,8 @@ func (node Node) Serialize() (*SerializedNode, error) {
     if err != nil {
         return nil, err
     }
-    result := SerializedNode(rawResult)
-    return &result, nil
+    serializedNode := SerializedNode(rawResult)
+    return &serializedNode, nil
 }
 
 func (serializedNode SerializedNode) Deserialize() (*Node, error) {
