@@ -13,8 +13,8 @@ func TestNode_SerializeSimple(t *testing.T) {
     }
 
     if serializedNode, err := node.Serialize(); err == nil {
-        if deserializeNode, err := serializedNode.Deserialize(); err == nil {
-            if deserializeNode.Left.Left.Val != "left.left" {
+        if deserializedNode, err := serializedNode.Deserialize(); err == nil {
+            if deserializedNode.Left.Left.Val != "left.left" {
                 t.Log("value mismatched")
                 t.Fail()
             }

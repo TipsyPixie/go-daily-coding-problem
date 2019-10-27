@@ -14,9 +14,8 @@ go test ./problem1
 
 ## Problems
 
-* EASY
-    * [#1](problem1)
-* MEDIUM
-    * [#3](problem3)
-* HARD
-    * [#2](problem2)
+Number | Difficulty | Asked By
+--- | --- | ---
+[#1](problem1) | EASY | Google
+[#2](problem2) | HARD | Uber
+[#3](problem3) | MEDIUM | Google
