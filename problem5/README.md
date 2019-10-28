@@ -8,7 +8,7 @@ This problem was asked by Jane Street.
 
 Given this implementation of cons:
 
-```
+```python
 def cons(a, b):
     def pair(f):
         return f(a, b)
