@@ -16,3 +16,15 @@ def cons(a, b):
 ```
 
 Implement car and cdr.
+
+P.S. Go implementation of cons:
+
+```
+type Func func(interface{}, interface{}) interface{}
+
+type Pair func(Func) interface{}
+
+func Cons(a interface{}, b interface{}) Pair {
+    return func(f Func) interface{} { return f(a, b) }
+}
+```
