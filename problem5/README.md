@@ -1,4 +1,4 @@
-## Daily Coding Problem: Problem #4 [Hard]
+## Daily Coding Problem: Problem #5 [Medium]
 
 Good morning! Here's your coding interview problem for today.
 
