@@ -6,10 +6,10 @@ Solutions for [Daily Coding Problem](https://www.dailycodingproblem.com/ "Daily 
 
 ## Getting Started
 
-Run `go test` to test the solutions.
+Run `make test` to test the solutions.
 ```bash
-# example
-go test ./problem1
+make test 1
+make test # test all
 ```
 
 ## Problems
