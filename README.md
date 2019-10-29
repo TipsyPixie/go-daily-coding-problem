@@ -21,3 +21,4 @@ Number | Difficulty | Asked By
 [#3](problem3) | MEDIUM | Google
 [#4](problem4) | HARD | Stripe
 [#5](problem5) | MEDIUM | Jane Street
+[#6](problem6) | HARD | Google
