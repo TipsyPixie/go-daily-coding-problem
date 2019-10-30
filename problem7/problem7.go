@@ -8,10 +8,10 @@ func Run(input string) int {
     length := len(input)
     switch {
     case length == 1:
-        if asInteger, _ := strconv.Atoi(input); asInteger > 0 && asInteger < 10 {
-            return 1
-        } else {
+        if asInteger, _ := strconv.Atoi(input); asInteger < 1 {
             return 0
+        } else {
+            return 1
         }
     case length == 2:
         if asInteger, _ := strconv.Atoi(input); asInteger < 10 || asInteger > 26 {
