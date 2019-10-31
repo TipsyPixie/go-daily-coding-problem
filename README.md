@@ -22,4 +22,4 @@ Number | Difficulty | Asked By
 [#4](problem4) | HARD | Stripe
 [#5](problem5) | MEDIUM | Jane Street
 [#6](problem6) | HARD | Google
-[#7](problem6) | MEDIUM | Facebook
+[#7](problem7) | MEDIUM | Facebook
