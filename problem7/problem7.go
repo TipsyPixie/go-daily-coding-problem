@@ -1,33 +1,43 @@
 package problem7
 
-import (
-    "strconv"
-)
+import "strconv"
 
-func Run(input string) int {
-    length := len(input)
+type codeString string
+
+func (code codeString) isDecodable() bool {
     switch {
-    case length == 1:
-        if asInteger, _ := strconv.Atoi(input); asInteger > 0 && asInteger < 10 {
-            return 1
-        } else {
-            return 0
-        }
-    case length == 2:
-        if asInteger, _ := strconv.Atoi(input); asInteger < 10 || asInteger > 26 {
-            return 0
-        } else if input[1] == '0' {
-            return 1
-        } else {
-            return 2
-        }
-    case length >= 3:
-        answer := Run(input[:length-1]) * Run(input[length-1:])
-        if asInteger, _ := strconv.Atoi(input[length-2:]); asInteger >= 10 || asInteger >= 26 {
-            answer += Run(input[:length-2])
-        }
-        return answer
+    case len(code) == 1:
+        asInteger, err := strconv.Atoi(string(code))
+        return err == nil && asInteger > 0 && asInteger < 10
+    case len(code) == 2:
+        asInteger, err := strconv.Atoi(string(code))
+        return err == nil && asInteger > 9 && asInteger < 27
     default:
-        return 0
+        return false
     }
+}
+
+func Run(input codeString) int {
+    answer := 0
+    switch {
+    case len(input) == 1:
+        if input.isDecodable() {
+            answer += 1
+        }
+    case len(input) == 2:
+        if input.isDecodable() {
+            answer += 1
+        }
+        if input[:1].isDecodable() && input[1:].isDecodable() {
+            answer += 1
+        }
+    case len(input) > 2:
+        if input[:1].isDecodable() {
+            answer += Run(input[1:])
+        }
+        if input[:2].isDecodable() {
+            answer += Run(input[2:])
+        }
+    }
+    return answer
 }
