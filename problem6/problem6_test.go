@@ -1,8 +1,6 @@
 package problem6
 
-import (
-    "testing"
-)
+import "testing"
 
 func TestAdd(t *testing.T) {
     head := NewNode(NodePointer(0))

@@ -1,8 +1,6 @@
 package problem4
 
-import (
-    "math"
-)
+import "math"
 
 func Run(input []int) int {
     // opting out negative values and 0s
