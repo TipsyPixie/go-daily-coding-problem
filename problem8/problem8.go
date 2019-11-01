@@ -1,30 +1,22 @@
 package problem8
 
 type binaryTree struct {
-    Parent *binaryTree
-    Left   *binaryTree
-    Right  *binaryTree
-    Value  int
+    Left  *binaryTree
+    Right *binaryTree
+    Value int
 }
 
 func NewNode(value int) *binaryTree {
     return &binaryTree{
-        Parent: nil,
-        Left:   nil,
-        Right:  nil,
-        Value:  value,
+        Left:  nil,
+        Right: nil,
+        Value: value,
     }
 }
 
 func (tree *binaryTree) SetChildren(left *binaryTree, right *binaryTree) *binaryTree {
     tree.Left = left
-    if left != nil {
-        left.Parent = tree
-    }
     tree.Right = right
-    if right != nil {
-        right.Parent = tree
-    }
     return tree
 }
 
