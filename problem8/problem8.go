@@ -1,70 +1,58 @@
 package problem8
 
-type binaryTree struct {
-    Left  *binaryTree
-    Right *binaryTree
+type node struct {
+    Left  *node
+    Right *node
     Value int
 }
 
-func NewNode(value int) *binaryTree {
-    return &binaryTree{
+func NewNode(value int) *node {
+    return &node{
         Left:  nil,
         Right: nil,
         Value: value,
     }
 }
 
-func (tree *binaryTree) SetChildren(left *binaryTree, right *binaryTree) *binaryTree {
-    tree.Left = left
-    tree.Right = right
+func (tree *node) SetChildren(left *node, right *node) *node {
+    tree.Left, tree.Right = left, right
     return tree
 }
 
-func (tree *binaryTree) isUnival() (bool, int) {
+func (tree *node) isUnival() bool {
     if tree.Left == nil && tree.Right == nil {
-        return true, tree.Value
+        return true
     } else if tree.Right == nil {
-        isLeftUnival, leftValue := tree.Left.isUnival()
-        return isLeftUnival && leftValue == tree.Value, tree.Value
+        return tree.Left.isUnival() && tree.Left.Value == tree.Value
     } else if tree.Left == nil {
-        isRightUnival, rightValue := tree.Right.isUnival()
-        return isRightUnival && rightValue == tree.Value, tree.Value
+        return tree.Right.isUnival() && tree.Right.Value == tree.Value
     } else {
-        ch1, ch2 := make(chan bool, 2), make(chan int, 2)
-        go func() {
-            isUnival, uniValue := tree.Left.isUnival()
-            ch1 <- isUnival
-            ch2 <- uniValue
-        }()
-        go func() {
-            isUnival, uniValue := tree.Right.isUnival()
-            ch1 <- isUnival
-            ch2 <- uniValue
-        }()
-        isSubtreeUnival1, isSubtreeUnival2, subtreeUnival1, subtreeUnival2 := <-ch1, <-ch1, <-ch2, <-ch2
-        return isSubtreeUnival1 && isSubtreeUnival2 && subtreeUnival1 == subtreeUnival2 && subtreeUnival2 == tree.Value, tree.Value
+        subtreeChecks := make(chan bool, 2)
+        go func() { subtreeChecks <- tree.Left.isUnival() }()
+        go func() { subtreeChecks <- tree.Right.isUnival() }()
+        return tree.Left.Value == tree.Right.Value && tree.Right.Value == tree.Value && <-subtreeChecks && <-subtreeChecks
     }
 }
 
-func (tree *binaryTree) CountUnival() int {
-    leftUnivalCount, rightUnivalCount := make(chan int, 1), make(chan int, 1)
+func (tree *node) CountUnival() int {
+    univalCounts := make(chan int, 2)
     go func() {
         if tree.Left != nil {
-            leftUnivalCount <- tree.Left.CountUnival()
-            return
+            univalCounts <- tree.Left.CountUnival()
+        } else {
+            univalCounts <- 0
         }
-        close(leftUnivalCount)
     }()
     go func() {
         if tree.Right != nil {
-            rightUnivalCount <- tree.Right.CountUnival()
-            return
+            univalCounts <- tree.Right.CountUnival()
+        } else {
+            univalCounts <- 0
         }
-        close(rightUnivalCount)
     }()
     count := 0
-    if isUnival, _ := tree.isUnival(); isUnival {
+    if tree.isUnival() {
         count += 1
     }
-    return count + <-leftUnivalCount + <-rightUnivalCount
+    return count + <-univalCounts + <-univalCounts
 }
