@@ -2,9 +2,9 @@ package problem10
 
 import "time"
 
-type SimpleFunction func() interface{}
+type Job func() interface{}
 
-func Schedule(f SimpleFunction, n int) <-chan interface{} {
+func Schedule(f Job, n int) <-chan interface{} {
     returnChannel := make(chan interface{}, 1)
     go func() {
         select {
