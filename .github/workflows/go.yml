@@ -14,8 +14,8 @@ jobs:
       - name: Check out code into the Go module directory
         uses: actions/checkout@v1
 
-      - name: Run Go Vet
-        run: make analyze  
+      - name: Analyzing Code
+        run: make analyze
 
-      - name: Run Go Test
+      - name: Run Tests
         run: make test
