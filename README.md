@@ -1,6 +1,7 @@
 # Go Daily Coding Problem
 
 [![Action Status](https://github.com/TipsyPixie/go-daily-coding-problem/workflows/Go%20Test/badge.svg)](https://github.com/TipsyPixie/go-daily-coding-problem/actions)
+[![Go Report Card](https://goreportcard.com/badge/github.com/TipsyPixie/go-daily-coding-problem)](https://goreportcard.com/report/github.com/TipsyPixie/go-daily-coding-problem)
 
 Solutions for [Daily Coding Problem](https://www.dailycodingproblem.com/ "Daily Coding Problem"), written in Go
 
