@@ -7,7 +7,3 @@ func TestRun(t *testing.T) {
 		t.FailNow()
 	}
 }
-
-func TestRun2(t *testing.T) {
-	t.Log(Run(20, []int{1, 3, 5}))
-}
