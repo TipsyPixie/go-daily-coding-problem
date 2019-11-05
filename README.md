@@ -9,7 +9,7 @@ Solutions for [Daily Coding Problem](https://www.dailycodingproblem.com/ "Daily 
 
 Run `make test` to test the solutions.
 ```bash
-make test NO=1 # test problem1
+make test NO=001 # test problem1
 make test # test all
 ```
 
