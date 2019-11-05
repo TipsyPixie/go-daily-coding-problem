@@ -42,14 +42,14 @@ func (node *trie) Find(query string) []string {
 	var result []string
 	if len(queryLeft) == 0 {
 		prefix := prefixBuilder.String()
-		for _, substring := range cursor.getStrings() {
+		for _, substring := range cursor.subStrings() {
 			result = append(result, fmt.Sprintf("%s%s", prefix, substring))
 		}
 	}
 	return result
 }
 
-func (node *trie) getStrings() []string {
+func (node *trie) subStrings() []string {
 	if len(*node) == 0 {
 		return []string{""}
 	}
@@ -57,7 +57,7 @@ func (node *trie) getStrings() []string {
 	for keyString, subNode := range *node {
 		go func(prefix string, node *trie) {
 			var subStrings []string
-			for _, subSubString := range node.getStrings() {
+			for _, subSubString := range node.subStrings() {
 				subStrings = append(subStrings, fmt.Sprintf("%s%s", prefix, subSubString))
 			}
 			childrenChannel <- subStrings
