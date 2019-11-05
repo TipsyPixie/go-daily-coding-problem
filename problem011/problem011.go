@@ -54,14 +54,14 @@ func (node *trie) getStrings() []string {
 		return []string{""}
 	}
 	childrenChannel := make(chan []string, len(*node))
-	for key, value := range *node {
-		go func(first string, subNode *trie) {
+	for keyString, subNode := range *node {
+		go func(prefix string, node *trie) {
 			var subStrings []string
-			for _, subSubString := range subNode.getStrings() {
-				subStrings = append(subStrings, fmt.Sprintf("%s%s", first, subSubString))
+			for _, subSubString := range node.getStrings() {
+				subStrings = append(subStrings, fmt.Sprintf("%s%s", prefix, subSubString))
 			}
 			childrenChannel <- subStrings
-		}(key, value)
+		}(keyString, subNode)
 	}
 	finished := 0
 	var result []string
