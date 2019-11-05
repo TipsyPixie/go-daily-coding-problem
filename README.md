@@ -28,3 +28,4 @@ Number | Difficulty | Asked By
 [#9](problem009) | HARD | Airbnb
 [#10](problem010) | MEDIUM | Apple
 [#11](problem011) | MEDIUM | Twitter
+[#12](problem012) | HARD | Amazon
