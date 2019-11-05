@@ -18,3 +18,5 @@ format: FORCE
 
 fix: FORCE
 	[ -z '$(NO)' ] && $(FIND) | sort | xargs go fix $(FIX_OPTS); [ -z '$(NO)' ] || go fix $(FIX_OPTS) './problem$(NO)'
+
+precommit: analyze format fix
