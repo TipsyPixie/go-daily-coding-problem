@@ -17,13 +17,14 @@ make test # test all
 
 Number | Difficulty | Asked By
 --- | --- | ---
-[#1](problem1) | EASY | Google
-[#2](problem2) | HARD | Uber
-[#3](problem3) | MEDIUM | Google
-[#4](problem4) | HARD | Stripe
-[#5](problem5) | MEDIUM | Jane Street
-[#6](problem6) | HARD | Google
-[#7](problem7) | MEDIUM | Facebook
-[#8](problem8) | EASY | Google
-[#9](problem9) | HARD | Airbnb
-[#10](problem10) | MEDIUM | Apple
+[#1](problem001) | EASY | Google
+[#2](problem002) | HARD | Uber
+[#3](problem003) | MEDIUM | Google
+[#4](problem004) | HARD | Stripe
+[#5](problem005) | MEDIUM | Jane Street
+[#6](problem006) | HARD | Google
+[#7](problem007) | MEDIUM | Facebook
+[#8](problem008) | EASY | Google
+[#9](problem009) | HARD | Airbnb
+[#10](problem010) | MEDIUM | Apple
+[#11](problem011) | MEDIUM | Twitter
