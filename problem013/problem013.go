@@ -9,8 +9,9 @@ func Run(input string, maxDistinctCount uint) uint {
 		characterCount[substringEndsWith] += 1
 		for len(characterCount) > int(maxDistinctCount) {
 			substringStartsWith := input[substringStartsAt : substringStartsAt+1]
-			characterCount[substringStartsWith] -= 1
-			if characterCount[substringStartsWith] == 0 {
+			if characterCount[substringStartsWith] > 1 {
+				characterCount[substringStartsWith] -= 1
+			} else {
 				delete(characterCount, substringStartsWith)
 			}
 			substringStartsAt++
