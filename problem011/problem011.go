@@ -15,17 +15,12 @@ func NewTrie() (t *trie) {
 func (node *trie) Insert(query string) *trie {
 	cursor := node
 	queryLeft := query
-	for len(queryLeft) > 0 && (*cursor)[queryLeft[:1]] != nil {
-		cursor = (*cursor)[queryLeft[:1]]
-		queryLeft = queryLeft[1:]
-	}
 	for len(queryLeft) > 0 {
-		(*cursor)[queryLeft[:1]] = NewTrie()
+		if (*cursor)[queryLeft[:1]] == nil {
+			(*cursor)[queryLeft[:1]] = NewTrie()
+		}
 		cursor = (*cursor)[queryLeft[:1]]
 		queryLeft = queryLeft[1:]
-	}
-	if (*cursor)[queryLeft] == nil {
-		(*cursor)[queryLeft] = NewTrie()
 	}
 	return node
 }
