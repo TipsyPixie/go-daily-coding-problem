@@ -1,14 +1,14 @@
 package problem013
 
-func Run(input string, maxDistinctCount uint) uint {
+func Run(input string, distinctCharactersLimit uint) uint {
 	var longestSubstringSize uint = 0
-	characterCount := make(map[string]int)
+	characterCount := make(map[rune]int)
 	substringStartsAt, substringEndsAt := 0, 0
 	for substringEndsAt < len(input) {
-		substringEndsWith := input[substringEndsAt : substringEndsAt+1]
+		substringEndsWith := []rune(input)[substringEndsAt]
 		characterCount[substringEndsWith] += 1
-		for len(characterCount) > int(maxDistinctCount) {
-			substringStartsWith := input[substringStartsAt : substringStartsAt+1]
+		for uint(len(characterCount)) > distinctCharactersLimit {
+			substringStartsWith := []rune(input)[substringStartsAt]
 			if characterCount[substringStartsWith] > 1 {
 				characterCount[substringStartsWith] -= 1
 			} else {
