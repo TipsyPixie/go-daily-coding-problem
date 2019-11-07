@@ -5,14 +5,14 @@ func Run(input string, distinctCharactersLimit uint) uint {
 	characterCount := make(map[rune]int)
 	substringStartsAt, substringEndsAt := 0, 0
 	for substringEndsAt < len(input) {
-		substringEndsWith := []rune(input)[substringEndsAt]
-		characterCount[substringEndsWith] += 1
+		startingCharacter := []rune(input)[substringEndsAt]
+		characterCount[startingCharacter] += 1
 		for uint(len(characterCount)) > distinctCharactersLimit {
-			substringStartsWith := []rune(input)[substringStartsAt]
-			if characterCount[substringStartsWith] > 1 {
-				characterCount[substringStartsWith] -= 1
+			endingCharacter := []rune(input)[substringStartsAt]
+			if characterCount[endingCharacter] > 1 {
+				characterCount[endingCharacter]--
 			} else {
-				delete(characterCount, substringStartsWith)
+				delete(characterCount, endingCharacter)
 			}
 			substringStartsAt++
 		}
