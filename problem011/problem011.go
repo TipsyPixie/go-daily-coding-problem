@@ -48,21 +48,21 @@ func (node *trie) subStrings() []string {
 	if len(*node) == 0 {
 		return []string{""}
 	}
-	childrenChannel := make(chan []string, len(*node))
+	substringChannel := make(chan []string, len(*node))
 	for keyString, subNode := range *node {
 		go func(prefix string, node *trie) {
 			var subStrings []string
 			for _, subSubString := range node.subStrings() {
 				subStrings = append(subStrings, fmt.Sprintf("%s%s", prefix, subSubString))
 			}
-			childrenChannel <- subStrings
+			substringChannel <- subStrings
 		}(keyString, subNode)
 	}
 	finished := 0
 	var result []string
 	for finished < len(*node) {
 		select {
-		case subStrings := <-childrenChannel:
+		case subStrings := <-substringChannel:
 			result = append(result, subStrings...)
 			finished++
 		}
