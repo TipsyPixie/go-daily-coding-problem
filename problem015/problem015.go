@@ -11,7 +11,7 @@ func Run(streamReader io.Reader) (byte, error) {
 	var selection byte
 	totalReadSize := 0
 	rand.Seed(time.Now().UnixNano())
-	for readSize, err := streamReader.Read(buffer); readSize > 0; {
+	for readSize, err := streamReader.Read(buffer); readSize > 0; readSize, err = streamReader.Read(buffer) {
 		for i := 0; i < readSize; i++ {
 			totalReadSize++
 			if rand.Intn(totalReadSize) == totalReadSize-1 {
@@ -25,7 +25,6 @@ func Run(streamReader io.Reader) (byte, error) {
 				return 0, err
 			}
 		}
-		readSize, err = streamReader.Read(buffer)
 	}
 	return selection, nil
 }
