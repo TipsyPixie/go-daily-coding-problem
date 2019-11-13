@@ -19,3 +19,6 @@ jobs:
 
       - name: Run Tests
         run: make test
+
+      - name: Update Go Report
+        run: make report
