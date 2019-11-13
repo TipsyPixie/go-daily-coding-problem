@@ -2,6 +2,7 @@ package problem014
 
 import (
 	"math"
+	"runtime"
 	"testing"
 )
 
@@ -13,7 +14,7 @@ func TestRun(t *testing.T) {
 }
 
 func TestRun2(t *testing.T) {
-	result := Run(8, 100000000)
+	result := Run(runtime.NumCPU(), 100000000)
 	if result < math.Pi*0.999 || result > math.Pi*1.001 {
 		t.FailNow()
 	}

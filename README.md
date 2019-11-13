@@ -34,3 +34,5 @@ Number | Difficulty | Asked By
 [#15](problem015) | MEDIUM | Facebook
 [#16](problem016) | EASY | Twitter
 [#17](problem017) | HARD | Google
+[#18](problem018) | HARD | Google
+[#19](problem019) | MEDIUM | Facebook
