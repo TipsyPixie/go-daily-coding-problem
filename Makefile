@@ -19,4 +19,9 @@ format: FORCE
 fix: FORCE
 	[ -z '$(NO)' ] && $(FIND) | sort | xargs go fix $(FIX_OPTS); [ -z '$(NO)' ] || go fix $(FIX_OPTS) './problem$(NO)'
 
+report: FORCE
+	curl -s -d 'repo=github.com%2FTipsyPixie%2Fgo-daily-coding-problem' https://goreportcard.com/checks >/dev/null
+
 precommit: fix analyze format test
+
+postcommit: report
