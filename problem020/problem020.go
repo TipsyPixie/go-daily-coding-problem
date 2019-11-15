@@ -43,13 +43,12 @@ func Run(firstList *linkedList, secondList *linkedList) int {
 		shorterOne, longerOne = firstList, secondList
 	}
 
-	shorterOneCursor, longerOneCursor := shorterOne, longerOne
 	for i := 0; i < lengthDifference; i++ {
-		longerOneCursor = longerOneCursor.next
+		longerOne = longerOne.next
 	}
-	for shorterOneCursor.value != longerOneCursor.value {
-		shorterOneCursor = shorterOneCursor.next
-		longerOneCursor = longerOneCursor.next
+	for shorterOne.value != longerOne.value {
+		shorterOne = shorterOne.next
+		longerOne = longerOne.next
 	}
-	return shorterOneCursor.value
+	return shorterOne.value
 }
