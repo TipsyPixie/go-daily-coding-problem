@@ -36,3 +36,5 @@ Number | Difficulty | Asked By
 [#17](problem017) | HARD | Google
 [#18](problem018) | HARD | Google
 [#19](problem019) | MEDIUM | Facebook
+[#20](problem020) | EASY | Google
+[#21](problem021) | EASY | Snapchat
