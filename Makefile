@@ -1,4 +1,4 @@
-TEST_OPTS=-v -cover
+TEST_OPTS=-v -cover -timeout 10s
 FIND=find -maxdepth 1 -type d -regextype posix-extended -regex '^\.\/problem[0-9]{1,3}$$'
 VET_OPTS=
 GOFMT_OPTS=-l -s -w
