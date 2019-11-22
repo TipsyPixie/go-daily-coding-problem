@@ -38,3 +38,4 @@ Number | Difficulty | Asked By
 [#19](problem019) | MEDIUM | Facebook
 [#20](problem020) | EASY | Google
 [#21](problem021) | EASY | Snapchat
+[#22](problem022) | MEDIUM | Microsoft

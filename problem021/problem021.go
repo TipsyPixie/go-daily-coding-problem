@@ -1,8 +1,6 @@
 package problem021
 
-import (
-	"sort"
-)
+import "sort"
 
 type Schedule struct {
 	startsAt int
@@ -27,18 +25,46 @@ type event struct {
 }
 
 func Run(lectureSchedules []Schedule) int {
-	events := make([]event, 0, len(lectureSchedules)*2)
+	startTime := make([]int, 0, len(lectureSchedules))
+	endTime := make([]int, 0, len(lectureSchedules))
 	for _, lectureSchedule := range lectureSchedules {
-		events = append(events,
-			event{
-				category: START,
-				time:     lectureSchedule.startsAt,
-			}, event{
-				category: END,
-				time:     lectureSchedule.endsAt,
-			})
+		startTime = append(startTime, lectureSchedule.startsAt)
+		endTime = append(endTime, lectureSchedule.endsAt)
 	}
-	sort.Slice(events, func(i, j int) bool { return events[i].time <= events[j].time })
+	sort.Ints(startTime)
+	sort.Ints(endTime)
+
+	events := make([]event, 0, len(startTime)+len(endTime))
+	for startIndex, endIndex := 0, 0; startIndex < len(startTime) || endIndex < len(endTime); {
+		switch {
+		case startIndex < len(startTime) && endIndex < len(endTime):
+			if startTime[startIndex] <= endTime[endIndex] {
+				events = append(events, event{
+					category: START,
+					time:     startTime[startIndex],
+				})
+				startIndex++
+			} else {
+				events = append(events, event{
+					category: END,
+					time:     endTime[endIndex],
+				})
+				endIndex++
+			}
+		case startIndex < len(startTime):
+			events = append(events, event{
+				category: START,
+				time:     startTime[startIndex],
+			})
+			startIndex++
+		case endIndex < len(endTime):
+			events = append(events, event{
+				category: END,
+				time:     endTime[endIndex],
+			})
+			endIndex++
+		}
+	}
 
 	classroomCount, maxClassroomCount := 0, 0
 	for _, event := range events {
