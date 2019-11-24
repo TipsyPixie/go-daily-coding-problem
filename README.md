@@ -39,3 +39,4 @@ Number | Difficulty | Asked By
 [#20](problem020) | EASY | Google
 [#21](problem021) | EASY | Snapchat
 [#22](problem022) | MEDIUM | Microsoft
+[#23](problem023) | EASY | Google
