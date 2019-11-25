@@ -40,3 +40,4 @@ Number | Difficulty | Asked By
 [#21](problem021) | EASY | Snapchat
 [#22](problem022) | MEDIUM | Microsoft
 [#23](problem023) | EASY | Google
+[#24](problem024) | EASY | Google
