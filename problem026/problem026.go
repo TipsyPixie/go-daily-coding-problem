@@ -2,7 +2,7 @@ package problem026
 
 type linkedList struct {
 	value int
-	next *linkedList
+	next  *linkedList
 }
 
 func (node *linkedList) FromLast(reverseIndex int) *linkedList {
