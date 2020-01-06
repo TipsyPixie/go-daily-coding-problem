@@ -41,4 +41,6 @@ Number | Difficulty | Asked By
 [#22](problem022) | MEDIUM | Microsoft
 [#23](problem023) | EASY | Google
 [#24](problem024) | MEDIUM | Google
+[#25](problem025) | HARD | Facebook
 [#26](problem026) | MEDIUM | Google
+[#27](problem027) | EASY | Facebook
