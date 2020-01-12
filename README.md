@@ -44,3 +44,6 @@ Number | Difficulty | Asked By
 [#25](problem025) | HARD | Facebook
 [#26](problem026) | MEDIUM | Google
 [#27](problem027) | EASY | Facebook
+[#28](problem028) | MEDIUM | Palantir
+[#29](problem029) | EASY | Amazon
+
