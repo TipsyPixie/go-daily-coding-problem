@@ -46,4 +46,6 @@ Number | Difficulty | Asked By
 [#27](problem027) | EASY | Facebook
 [#28](problem028) | MEDIUM | Palantir
 [#29](problem029) | EASY | Amazon
+[#30](problem030) | MEDIUM | Facebook
+[#31](problem031) | MEDIUM | Facebook
 
