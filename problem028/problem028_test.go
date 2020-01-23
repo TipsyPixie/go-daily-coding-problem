@@ -10,5 +10,6 @@ func TestJustify(t *testing.T) {
 	result := Justify(words, 16)
 	if !reflect.DeepEqual(result, []string{"the  quick brown", "fox  jumps  over", "the   lazy   dog"}) {
 		t.Fail()
+		t.Log(result)
 	}
 }

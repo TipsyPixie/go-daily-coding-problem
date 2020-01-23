@@ -2,7 +2,7 @@ package problem030
 
 func MeasureTrappedWater(wallHeights []int) int {
 	trappedWater := 0
-	leftCursor, rightCursor := 0, len(wallHeights) - 1
+	leftCursor, rightCursor := 0, len(wallHeights)-1
 	leftMaxHeight, rightMaxHeight := 0, 0
 	for leftCursor <= rightCursor {
 		if leftHeight, rightHeight := wallHeights[leftCursor], wallHeights[rightCursor]; leftHeight < rightHeight {
@@ -21,7 +21,6 @@ func MeasureTrappedWater(wallHeights []int) int {
 			rightCursor--
 		}
 	}
-
 
 	return trappedWater
 }
