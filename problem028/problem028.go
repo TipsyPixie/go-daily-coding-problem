@@ -16,7 +16,7 @@ func Justify(words []string, lineLength int) []string {
 			wordIndex++
 		} else {
 			justifiedWords = append(justifiedWords, justifyLine(lineSizeLeft, wordsInline, spaceCounts))
-			justifiedWords, lineSizeLeft, wordsInline, spaceCounts = initValues(words, lineLength)
+			_, lineSizeLeft, wordsInline, spaceCounts = initValues(words, lineLength)
 		}
 	}
 	justifiedWords = append(justifiedWords, justifyLine(lineSizeLeft, wordsInline, spaceCounts))
@@ -25,10 +25,10 @@ func Justify(words []string, lineLength int) []string {
 }
 
 func justifyLine(lineSizeLeft int, wordsInline []string, spaceCounts []int) string {
+	if len(wordsInline) == 1 {
+		spaceCounts = append(spaceCounts, 0)
+	}
 	for lineSize := 0; lineSize < lineSizeLeft; lineSize++ {
-		if len(wordsInline) == 1 {
-			spaceCounts = append(spaceCounts, 0)
-		}
 		spaceCounts[lineSize%len(spaceCounts)]++
 	}
 	if len(wordsInline) > 1 {
