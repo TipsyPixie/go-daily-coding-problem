@@ -49,4 +49,5 @@ Number | Difficulty | Asked By
 [#30](problem030) | MEDIUM | Facebook
 [#31](problem031) | EASY | Google
 [#32](problem032) | HARD | Jane Street
+[#33](problem033) | EASY | Microsoft
 
