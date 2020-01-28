@@ -48,4 +48,5 @@ Number | Difficulty | Asked By
 [#29](problem029) | EASY | Amazon
 [#30](problem030) | MEDIUM | Facebook
 [#31](problem031) | EASY | Google
+[#32](problem032) | HARD | Jane Street
 
