@@ -9,14 +9,13 @@ Solutions for [Daily Coding Problem](https://www.dailycodingproblem.com/ "Daily 
 
 Run `make test` to test the solutions.
 ```bash
-make test NO=001 # test problem1
 make test # test all
 ```
 
 ## Problems
 
 Number | Difficulty | Asked By
---- | --- | ---
+--- | --- | --- |
 [#1](problem001) | EASY | Google
 [#2](problem002) | HARD | Uber
 [#3](problem003) | MEDIUM | Google
@@ -51,4 +50,5 @@ Number | Difficulty | Asked By
 [#32](problem032) | HARD | Jane Street
 [#33](problem033) | EASY | Microsoft
 [#34](problem034) | MEDIUM | Quora
+[#35](problem035) | HARD | Google
 
