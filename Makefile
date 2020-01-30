@@ -21,7 +21,4 @@ fix: FORCE
 report: FORCE
 	curl -s -d 'repo=github.com%2FTipsyPixie%2Fgo-daily-coding-problem' https://goreportcard.com/checks >/dev/null
 
-hook: FORCE
-	find 'hooks' -maxdepth 1 -type f -exec ln -s '../../{}' -t './.git/hooks' \;
-
 precommit: fix analyze format test

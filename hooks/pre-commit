@@ -1,6 +1,0 @@
-#!/bin/sh
-
-git stash -q --keep-index &&
-    make precommit &&
-    git add -u &&
-    git stash pop -q

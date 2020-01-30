@@ -12,8 +12,6 @@ Run `make test` to test the solutions.
 make test # test all
 ```
 
-`make hook` to install git hooks in `hooks` directory.
-
 ## Problems
 
 Number | Difficulty | Asked By

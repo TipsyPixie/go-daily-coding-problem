@@ -2,7 +2,7 @@ package problem035
 
 func partialSegregate(letter rune, in []rune) int {
 	leftIndex, rightIndex := 0, len(in)
-	for leftIndex < rightIndex {
+	for leftIndex <= rightIndex {
 		leftLetter := in[leftIndex]
 		if leftLetter == letter {
 			leftIndex++
@@ -14,12 +14,12 @@ func partialSegregate(letter rune, in []rune) int {
 			in[leftIndex], in[rightIndex] = rightLetter, leftLetter
 		}
 	}
-	return leftIndex + 1
+	return leftIndex
 }
 
 func Segregate(letters []rune) {
 	letterTypes := []rune{'R', 'G', 'B'}
-	for typeIndex, startingIndex := 0, 0; typeIndex < len(letterTypes) && startingIndex < len(letters); typeIndex++ {
-		startingIndex = partialSegregate(letterTypes[typeIndex], letters[startingIndex:])
+	for typeIndex, startingIndex := 0, 0; typeIndex < len(letterTypes)-1 && startingIndex < len(letters); typeIndex++ {
+		startingIndex += partialSegregate(letterTypes[typeIndex], letters[startingIndex:])
 	}
 }
