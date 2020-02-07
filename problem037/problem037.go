@@ -67,14 +67,6 @@ func (thisSet *SetOfSet) add(value *Set) *SetOfSet {
 	return thisSet
 }
 
-func (thisSet *SetOfSet) copy() *SetOfSet {
-	cloneSetOfSet := make(SetOfSet)
-	for value := range *thisSet {
-		cloneSetOfSet.add(value.copy())
-	}
-	return &cloneSetOfSet
-}
-
 func (thisSet *SetOfSet) has(value *Set) bool {
 	for element := range *thisSet {
 		if element.equal(value) {
