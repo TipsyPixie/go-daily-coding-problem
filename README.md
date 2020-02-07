@@ -52,3 +52,4 @@ Number | Difficulty | Asked By | Title
 [#34](problem034) | MEDIUM | Quora
 [#35](problem035) | HARD | Google
 [#36](problem036) | MEDIUM | Dropbox | Finding the second largest node in BST
+[#37](problem037) | EASY | Google | Generating the power set of a set
