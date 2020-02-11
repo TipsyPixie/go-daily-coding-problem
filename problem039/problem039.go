@@ -1,6 +1,7 @@
 package problem039
 
 import (
+	"bytes"
 	"errors"
 	"fmt"
 )
@@ -85,7 +86,7 @@ func (thisPlate *culuturePlate) next() (*culuturePlate, error) {
 		if rowIndex < len(*thisPlate) {
 			rowLength = len((*thisPlate)[rowIndex])
 		} else {
-			rowLength = len((*thisPlate)[rowIndex - 1])
+			rowLength = len((*thisPlate)[rowIndex-1])
 		}
 		for columnIndex := 0; columnIndex < rowLength+1; columnIndex++ {
 			neighborCount := thisPlate.countNeighbors(rowIndex, columnIndex)
@@ -112,6 +113,22 @@ func (thisPlate *culuturePlate) next() (*culuturePlate, error) {
 	return nextPlate, nil
 }
 
+func (thisPlate *culuturePlate) toString() string {
+	buffer := new(bytes.Buffer)
+
+	for _, row := range *thisPlate {
+		for _, cell := range row {
+			if cell == live {
+				buffer.WriteString("#")
+			} else {
+				buffer.WriteString(".")
+			}
+		}
+		buffer.WriteString("\n")
+	}
+	return buffer.String()
+}
+
 func GameOfLife(liveCellsCoords [][]int, steps int) error {
 	maxRow, maxColumn := 0, 0
 	for _, coords := range liveCellsCoords {
@@ -128,26 +145,14 @@ func GameOfLife(liveCellsCoords [][]int, steps int) error {
 		plate.set(coords[0], coords[1], live)
 	}
 
-	for i := 0; i < steps+1; i++ {
-		if i < steps {
-			next, err := plate.next()
-			if err != nil {
-				return err
-			}
-			plate = next
+	for i := 0; i < steps; i++ {
+		next, err := plate.next()
+		if err != nil {
+			return err
 		}
+		plate = next
 	}
 
-	for _, row := range *plate {
-		for _, cell := range row {
-			if cell == live {
-				fmt.Print("#")
-			} else {
-				fmt.Print(".")
-			}
-		}
-		fmt.Println()
-	}
-	fmt.Println()
+	fmt.Println(plate.toString())
 	return nil
 }
