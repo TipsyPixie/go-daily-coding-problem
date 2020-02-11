@@ -68,11 +68,12 @@ func arrange(boardState *chessBoard, alreadyDeployed int) int {
 	}
 
 	arrangementCount := 0
+	row := alreadyDeployed
 	for column := 0; column < boardSize; column++ {
-		if boardState.isSafe(alreadyDeployed, column) {
-			boardState.putQueen(alreadyDeployed, column)
+		if boardState.isSafe(row, column) {
+			boardState.putQueen(row, column)
 			arrangementCount += arrange(boardState, alreadyDeployed+1)
-			boardState.removeQueen(alreadyDeployed, column)
+			boardState.removeQueen(row, column)
 		}
 	}
 	return arrangementCount

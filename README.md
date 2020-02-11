@@ -50,7 +50,8 @@ Number | Difficulty | Asked By | Title
 [#32](problem032) | HARD | Jane Street
 [#33](problem033) | EASY | Microsoft
 [#34](problem034) | MEDIUM | Quora
-[#35](problem035) | HARD | Google
+[#35](problem035) | HARD | Google | Segregating R, G, and Bs in linear time
 [#36](problem036) | MEDIUM | Dropbox | Finding the second largest node in BST
 [#37](problem037) | EASY | Google | Generating the power set of a set
-[#38](problem038) | HARD | Microsoft | Arranging queens without threatening one another
+[#38](problem038) | HARD | Microsoft | Arranging N queens without threatening one another
+[#39](problem039) | HARD | Dropbox | Conway's Game of Life
