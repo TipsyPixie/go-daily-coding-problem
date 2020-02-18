@@ -55,4 +55,4 @@ Number | Difficulty | Asked By | Title
 [#37](problem037) | EASY | Google | Generating the power set of a set
 [#38](problem038) | HARD | Microsoft | Arranging N queens without threatening one another
 [#39](problem039) | MEDIUM | Dropbox | Conway's Game of Life
-[#40](problem039) | HARD | Google | Finding the non-duplicated number
+[#40](problem040) | HARD | Google | Finding the non-duplicated number
