@@ -54,4 +54,5 @@ Number | Difficulty | Asked By | Title
 [#36](problem036) | MEDIUM | Dropbox | Finding the second largest node in BST
 [#37](problem037) | EASY | Google | Generating the power set of a set
 [#38](problem038) | HARD | Microsoft | Arranging N queens without threatening one another
-[#39](problem039) | HARD | Dropbox | Conway's Game of Life
+[#39](problem039) | MEDIUM | Dropbox | Conway's Game of Life
+[#40](problem039) | HARD | Google | Finding the non-duplicated number
