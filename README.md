@@ -2,6 +2,7 @@
 
 [![Action Status](https://github.com/TipsyPixie/go-daily-coding-problem/workflows/Go%20Test/badge.svg)](https://github.com/TipsyPixie/go-daily-coding-problem/actions)
 [![Go Report Card](https://goreportcard.com/badge/github.com/TipsyPixie/go-daily-coding-problem)](https://goreportcard.com/report/github.com/TipsyPixie/go-daily-coding-problem)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Solutions for [Daily Coding Problem](https://www.dailycodingproblem.com/ "Daily Coding Problem"), written in Go
 
@@ -56,3 +57,4 @@ Number | Difficulty | Asked By | Title
 [#38](problem038) | HARD | Microsoft | Arranging N queens without threatening one another
 [#39](problem039) | MEDIUM | Dropbox | Conway's Game of Life
 [#40](problem040) | HARD | Google | Finding the non-duplicated number
+[#41](problem041) | MEDIUM | Facebook | Finding full itinerary from a list of flights
