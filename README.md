@@ -61,4 +61,6 @@ Number | Difficulty | Asked By | Title
 [#42](problem042) | HARD | Google | Finding a subset of S that adds up to k
 [#43](problem043) | EASY | Amazon | Implementing Stack
 [#44](problem044) | MEDIUM | Google | Counting inversions in a list of numbers
+[#45](problem045) | EASY | Two Sigma | Writing rand function
+[#46](problem046) | HARD | Amazon | Finding the longest palindromic substring
 
