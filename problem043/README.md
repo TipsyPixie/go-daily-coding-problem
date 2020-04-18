@@ -1,4 +1,4 @@
-## Daily Coding Problem: Problem #43 [EASY]
+## Daily Coding Problem: Problem #43
 
 
 Good morning! Here's your coding interview problem for today.

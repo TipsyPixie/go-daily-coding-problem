@@ -1,3 +1,3 @@
 module github.com/TipsyPixie/go-daily-coding-problem
 
-go 1.13
+go 1.14

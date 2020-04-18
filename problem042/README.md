@@ -1,4 +1,4 @@
-## Daily Coding Problem: Problem #42 [HARD]
+## Daily Coding Problem: Problem #42
 
 Good morning! Here's your coding interview problem for today.
 
