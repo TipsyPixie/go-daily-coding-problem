@@ -60,4 +60,5 @@ Number | Difficulty | Asked By | Title
 [#41](problem041) | MEDIUM | Facebook | Finding full itinerary from a list of flights
 [#42](problem042) | HARD | Google | Finding a subset of S that adds up to k
 [#43](problem043) | EASY | Amazon | Implementing Stack
+[#44](problem044) | MEDIUM | Google | Counting inversions in a list of numbers
 

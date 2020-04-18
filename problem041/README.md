@@ -1,4 +1,4 @@
-## Daily Coding Problem: Problem #41 [MEDIUM]
+## Daily Coding Problem: Problem #41
 
 Good morning! Here's your coding interview problem for today.
 
