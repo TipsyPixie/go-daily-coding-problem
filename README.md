@@ -63,8 +63,8 @@ Number | Difficulty | Asked By | Title
 [#44](problem044) | MEDIUM | Google | Counting inversions in a list of numbers
 [#45](problem045) | EASY | Two Sigma | Writing rand function
 [#46](problem046) | HARD | Amazon | Finding the longest palindromic substring
-[#47](problem047) | HARD | Amazon | Finding the longest palindromic substring
-[#48](problem048) | EASY | Facebook | Calculating maximum profit with chronological stock prices
+[#47](problem047) | EASY | Facebook | Calculating maximum profit with chronological stock prices
+[#48](problem048) | MEDIUM | Google | Build a tree with given pre-order and in-order traversals
 [#49](problem049) |  |  |
 [#50](problem050) |  |  |
 
