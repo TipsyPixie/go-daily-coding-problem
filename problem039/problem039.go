@@ -3,7 +3,6 @@ package problem039
 import (
 	"bytes"
 	"errors"
-	"fmt"
 )
 
 type culuturePlate [][]int
@@ -129,7 +128,7 @@ func (thisPlate *culuturePlate) toString() string {
 	return buffer.String()
 }
 
-func GameOfLife(liveCellsCoords [][]int, steps int) error {
+func GameOfLife(liveCellsCoords [][]int, steps int) (string, error) {
 	maxRow, maxColumn := 0, 0
 	for _, coords := range liveCellsCoords {
 		if coords[0] > maxRow {
@@ -148,11 +147,10 @@ func GameOfLife(liveCellsCoords [][]int, steps int) error {
 	for i := 0; i < steps; i++ {
 		next, err := plate.next()
 		if err != nil {
-			return err
+			return "", err
 		}
 		plate = next
 	}
 
-	fmt.Println(plate.toString())
-	return nil
+	return plate.toString(), nil
 }
