@@ -64,7 +64,7 @@ Number | Difficulty | Asked By | Title
 [#45](problem045) | EASY | Two Sigma | Writing rand function
 [#46](problem046) | HARD | Amazon | Finding the longest palindromic substring
 [#47](problem047) | EASY | Facebook | Calculating maximum profit with chronological stock prices
-[#48](problem048) | MEDIUM | Google | Build a tree with given pre-order and in-order traversals
-[#49](problem049) |  |  |
-[#50](problem050) |  |  |
+[#48](problem048) | MEDIUM | Google | Building a tree with given pre-order and in-order traversals
+[#49](problem049) | MEDIUM | Amazon | Finding the maximum sum of contiguous subarray
+[#50](problem050) | EASY | Microsoft | Arithmetic binary tree
 
