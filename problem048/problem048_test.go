@@ -40,7 +40,7 @@ func TestFromValues(t *testing.T) {
 			},
 		},
 	}
-	for i, _ := range testArgs {
+	for i := range testArgs {
 		answer := FromValues(testArgs[i], testArgs2[i])
 		if !answer.Equal(&correctAnswer) {
 			t.Log(fmt.Sprintf("failed at %v, %v", testArgs[i], testArgs2[i]))
