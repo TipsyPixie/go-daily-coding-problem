@@ -67,4 +67,7 @@ Number | Difficulty | Asked By | Title
 [#48](problem048) | MEDIUM | Google | Building a tree with given pre-order and in-order traversals
 [#49](problem049) | MEDIUM | Amazon | Finding the maximum sum of contiguous subarray
 [#50](problem050) | EASY | Microsoft | Arithmetic binary tree
+[#51](problem051) | MEDIUM | Facebook | Card shuffle
+[#52](problem052) | HARD | Google | LRU cache
+[#53](problem053) | MEDIUM | Apple | Implementing a queue with 2 stacks
 
