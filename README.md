@@ -70,4 +70,5 @@ Number | Difficulty | Asked By | Title
 [#51](problem051) | MEDIUM | Facebook | Card shuffle
 [#52](problem052) | HARD | Google | LRU cache
 [#53](problem053) | MEDIUM | Apple | Implementing a queue with 2 stacks
+[#54](problem054) | HARD | Dropbox | Implementing a Sudoku solver
 
