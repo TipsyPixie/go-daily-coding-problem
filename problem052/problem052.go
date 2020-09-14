@@ -10,7 +10,7 @@ type node struct {
 	prev  *node
 	next  *node
 	key   cacheKey
-	value cacheValue
+	value *cacheValue
 }
 
 type cache struct {
@@ -36,7 +36,7 @@ func (thisCache *cache) Get(key cacheKey) *cacheValue {
 		return nil
 	} else {
 		if thisCache.lastData == valueNode {
-			return &valueNode.value
+			return valueNode.value
 		}
 		if valueNode.prev != nil {
 			valueNode.prev.next = valueNode.next
@@ -46,13 +46,13 @@ func (thisCache *cache) Get(key cacheKey) *cacheValue {
 		}
 		thisCache.lastData.next = valueNode
 		thisCache.lastData = valueNode
-		return &valueNode.value
+		return valueNode.value
 	}
 }
 
 func (thisCache *cache) Set(key cacheKey, value cacheValue) *cache {
 	if valueNode, valueExists := thisCache.data[key]; valueExists {
-		valueNode.value = value
+		valueNode.value = &value
 	} else {
 		if thisCache.firstData != nil && thisCache.length >= thisCache.capacity {
 			if thisCache.firstData.next != nil {
@@ -67,7 +67,7 @@ func (thisCache *cache) Set(key cacheKey, value cacheValue) *cache {
 			prev:  thisCache.lastData,
 			next:  nil,
 			key:   key,
-			value: value,
+			value: &value,
 		}
 		if thisCache.lastData != nil {
 			thisCache.lastData.next = valueNode
