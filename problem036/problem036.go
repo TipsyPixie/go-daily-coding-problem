@@ -40,5 +40,14 @@ func (root *binarySearchTree) FindSecondLargest() *binarySearchTree {
 		parentTree = tree
 		tree = tree.rightChild
 	}
+
+	leftLargestChild := tree.leftChild
+	if leftLargestChild != nil {
+		for leftLargestChild.rightChild != nil {
+			leftLargestChild = leftLargestChild.rightChild
+		}
+		return leftLargestChild
+	}
+
 	return parentTree
 }
