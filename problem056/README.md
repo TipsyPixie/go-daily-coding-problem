@@ -1,15 +1,9 @@
-## Daily Coding Problem: Problem #55
+## Daily Coding Problem: Problem #56
+
 
 Good morning! Here's your coding interview problem for today.
 
-This problem was asked by Microsoft.
+This problem was asked by Google.
 
-Implement a URL shortener with the following methods:
+Given an undirected graph represented as an adjacency matrix and an integer k, write a function to determine whether each vertex in the graph can be colored such that no two adjacent vertices share the same color using at most k colors.
 
-```text
-shorten(url), which shortens the url into a six-character alphanumeric string, such as zLg6wl.
-
-restore(short), which expands the shortened string into the original url. If no such shortened string exists, return null.
-```
-
-Hint: What if we enter the same URL twice?
