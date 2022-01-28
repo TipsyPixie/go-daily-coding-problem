@@ -2,6 +2,7 @@ package problem057
 
 import (
 	"reflect"
+	"strings"
 	"testing"
 )
 
@@ -28,9 +29,9 @@ func TestSplitLine(t *testing.T) {
 	for _, testCase := range testCases {
 		actual, expected := SplitLine(testCase.fullSentence, testCase.lengthLimit), testCase.result
 		if actual == nil && expected == nil {
-			t.Logf("Actual %s != Expected %s", "nil", "nil")
+			t.Logf("Actual: %s / Expected: %s", "nil", "nil")
 		} else {
-			t.Logf("Actual %s != Expected %s", actual, expected)
+			t.Logf("Actual: %s / Expected: %s", strings.Join(actual, ", "), strings.Join(expected, ", "))
 		}
 		if (actual == nil && expected == nil) && !reflect.DeepEqual(actual, expected) {
 			t.Fail()
