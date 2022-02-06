@@ -8,11 +8,12 @@ func SplitLine(fullSentence string, lengthLimit int) []string {
 	lines := make([]string, 0)
 	currentLineWords, currentLineLength := make([]string, 0, lengthLimit), 0
 	for _, word := range strings.Split(fullSentence, " ") {
-		if len(word) > lengthLimit {
+		switch {
+		case len(word) > lengthLimit:
 			return nil
-		} else if lineLengthToBe := currentLineLength + 1 + len(word); lineLengthToBe <= lengthLimit {
+		case currentLineLength+1+len(word) <= lengthLimit:
 			currentLineWords, currentLineLength = append(currentLineWords, word), currentLineLength+1+len(word)
-		} else {
+		default:
 			lines = append(lines, strings.Join(currentLineWords, " "))
 			currentLineWords, currentLineLength = []string{word}, len(word)
 		}
