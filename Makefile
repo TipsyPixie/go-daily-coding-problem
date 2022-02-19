@@ -1,24 +1,22 @@
-TEST_OPTS=-cover -timeout 20s -count 1
+TESTARGS?=-cover -timeout 20s
 FIND=find -maxdepth 1 -type d -regextype posix-extended -regex '^\.\/problem[0-9]{1,3}$$'
-VET_OPTS=
-FMT_OPTS=-l -s -w
-FIX_OPTS=
+PACKAGES=$$(go list ./...)
 
 FORCE:
 
 test: FORCE
-	! $(FIND) -exec go test $(TEST_OPTS) {} \; | grep -q 'FAIL'
+	go test ${TESTARGS} ${PACKAGES}
 
-analyze: FORCE
-	$(FIND) -exec go vet $(VET_OPTS) {} \;
+check: FORCE
+	go vet ${VETARGS} ${PACKAGES}
 
 format: FORCE
-	$(FIND) -exec gofmt $(FMT_OPTS) {} \;
+	go fmt ${FMTARGS} ${PACKAGES}
 
 fix: FORCE
-	$(FIND) -exec go fix $(FIX_OPTS) {} \;
+	go fix ${FIXARGS} ${PACKAGES}
 
 report: FORCE
-	curl -s -d 'repo=github.com%2FTipsyPixie%2Fgo-daily-coding-problem' https://goreportcard.com/checks >/dev/null
+	curl -s --max-time 10 -d 'repo=github.com%2FTipsyPixie%2Fgo-daily-coding-problem' https://goreportcard.com/checks >/dev/null
 
-precommit: fix analyze format test
+precommit: fix format check test

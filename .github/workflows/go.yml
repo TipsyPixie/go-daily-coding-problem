@@ -5,20 +5,20 @@ jobs:
     name: Test
     runs-on: ubuntu-latest
     steps:
-      - name: Set up Go 1.14
+      - name: Set up Go 1.17
         uses: actions/setup-go@v1
         with:
-          go-version: 1.14
+          go-version: 1.17
         id: go
 
       - name: Check out code into the Go module directory
         uses: actions/checkout@v1
 
-      - name: Analyzing Code
+      - name: Run static analysis
         run: make analyze
 
-      - name: Run Tests
+      - name: Run tests
         run: make test
 
-      - name: Update Go Report
+      - name: Update Go report
         run: make report
