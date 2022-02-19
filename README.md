@@ -80,4 +80,6 @@ make test # test all
 | [#56](problem056) | MEDIUM     | Google      | Map coloring                                                 |
 | [#57](problem057) | MEDIUM     | Amazon      | Splitting string into lines of limited length                |
 | [#58](problem058) | MEDIUM     | Amazon      | Search in rotated sorted array                               |
+| [#59](problem059) | HARD       | Google      | Low bandwidth file synchronization                           |
+| [#60](problem060) | MEDIUM     | Facebook    | Partitioning set by subtotals                                |
 
