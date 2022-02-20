@@ -22,7 +22,7 @@ func canBePartitioned(numbers []int, firstSum int, halfTotal int) bool {
 		case tempFirstSum == halfTotal:
 			return true
 		case tempFirstSum < halfTotal:
-			if canBePartitioned(append(numbers[:i], numbers[i:]...), tempFirstSum, halfTotal) {
+			if canBePartitioned(append(numbers[:i], numbers[i+1:]...), tempFirstSum, halfTotal) {
 				return true
 			}
 		}

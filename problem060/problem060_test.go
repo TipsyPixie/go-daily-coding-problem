@@ -41,6 +41,10 @@ func TestCanBePartitioned(t *testing.T) {
 			numbers: []int{4},
 			result:  false,
 		},
+		{
+			numbers: []int{2, 5, 5, 0},
+			result:  false,
+		},
 	}
 
 	for _, testCase := range testCases {
