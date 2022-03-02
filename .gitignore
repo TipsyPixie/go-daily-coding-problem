@@ -1,5 +1,8 @@
-### IDE
+### Env
 .idea
+.vscode
+.DS_Store
+.tool-versions
 
 ### Temporary Files
 *.swp
