@@ -28,8 +28,8 @@ make test # test all
 | [#4](problem004)  | HARD       | Stripe      | Finding lowest positive number                               |
 | [#5](problem005)  | MEDIUM     | Jane Street | Lisp pair operations                                         |
 | [#6](problem006)  | HARD       | Google      | XOR linked list                                              |
-| [#7](problem007)  | MEDIUM     | Facebook    |                                                              |
-| [#8](problem008)  | EASY       | Google      |                                                              |
+| [#7](problem007)  | MEDIUM     | Facebook    | Message encoding                                             |
+| [#8](problem008)  | EASY       | Google      | Counting unival tree                                         |
 | [#9](problem009)  | HARD       | Airbnb      |                                                              |
 | [#10](problem010) | MEDIUM     | Apple       |                                                              |
 | [#11](problem011) | MEDIUM     | Twitter     |                                                              |
@@ -86,3 +86,4 @@ make test # test all
 | [#62](problem062) | MEDIUM     | Facebook    | Couting methods to move down                                 |
 | [#63](problem063) | EASY       | Microsoft   | Finding word left-to-right or up-to-down                     |
 | [#64](problem064) | HARD       | Google      | Knight's tour on Chessboard                                  |
+| [#65](problem065) | EASY       | Amazon      | Clockwise matrix traverse                                    |
