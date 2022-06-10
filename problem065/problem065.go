@@ -5,7 +5,7 @@ type coord struct {
 	col int
 }
 
-func traverseMatrix(matrix [][]int) []int {
+func TraverseMatrix(matrix [][]int) []int {
 	visited := map[coord]bool{}
 	var result []int
 	rowDiffs := []int{1, 0, -1, 0}
