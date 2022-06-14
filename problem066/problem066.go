@@ -22,23 +22,10 @@ func biasedToss() int {
 }
 
 func FairToss() int {
-	tossResults := make(chan *resultPair, 10)
-
-	const tossCount int = 2 * 5
 	for {
-		for i := 0; i < tossCount; i++ {
-			go func() {
-				tossResults <- &resultPair{biasedToss(), biasedToss()}
-			}()
-		}
-
-		for i := 0; i < tossCount; i++ {
-			select {
-			case tossResult := <-tossResults:
-				if tossResult.first != tossResult.second {
-					return tossResult.first
-				}
-			}
+		tossResult := &resultPair{biasedToss(), biasedToss()}
+		if tossResult.first != tossResult.second {
+			return tossResult.first
 		}
 	}
 }

@@ -17,6 +17,6 @@ fix: FORCE
 	go fix ${FIXARGS} ${PACKAGES}
 
 report: FORCE
-	curl -s --max-time 10 -d 'repo=github.com%2FTipsyPixie%2Fgo-daily-coding-problem' https://goreportcard.com/checks >/dev/null
+	curl -s --max-time 10 --retry 5 --retry-delay 0 --retry-max-time 40 -d 'repo=github.com%2FTipsyPixie%2Fgo-daily-coding-problem' https://goreportcard.com/checks >/dev/null
 
 precommit: fix format check test

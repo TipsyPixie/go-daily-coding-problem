@@ -5,7 +5,7 @@ import "testing"
 const leeway float32 = 0.1
 
 func TestFairToss(t *testing.T) {
-	for _, count := range []int{1000, 10000, 100000} {
+	for _, count := range []int{10000, 100000, 1000000} {
 		headCount := 0
 		for i := 0; i < count; i++ {
 			if coin := FairToss(); coin == 0 {
