@@ -2,7 +2,7 @@ package problem066
 
 import "testing"
 
-const leeway float32 = 0.15
+const leeway float32 = 0.1
 
 func TestFairToss(t *testing.T) {
 	for _, count := range []int{1000, 10000, 100000} {
