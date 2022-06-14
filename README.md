@@ -30,7 +30,7 @@ make test # test all
 | [#6](problem006)  | HARD       | Google      | XOR linked list                                              |
 | [#7](problem007)  | MEDIUM     | Facebook    | Message encoding                                             |
 | [#8](problem008)  | EASY       | Google      | Counting unival tree                                         |
-| [#9](problem009)  | HARD       | Airbnb      |                                                              |
+| [#9](problem009)  | HARD       | Airbnb      | Finding the largest sum of non-adjacent numbers              |
 | [#10](problem010) | MEDIUM     | Apple       |                                                              |
 | [#11](problem011) | MEDIUM     | Twitter     |                                                              |
 | [#12](problem012) | HARD       | Amazon      |                                                              |
@@ -87,3 +87,4 @@ make test # test all
 | [#63](problem063) | EASY       | Microsoft   | Finding word left-to-right or up-to-down                     |
 | [#64](problem064) | HARD       | Google      | Knight's tour on Chessboard                                  |
 | [#65](problem065) | EASY       | Amazon      | Clockwise matrix traverse                                    |
+| [#66](problem066) | MEDIUM     | Square      | Fair coin toss with a biased coin                            |
