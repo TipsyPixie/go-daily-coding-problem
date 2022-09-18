@@ -31,9 +31,9 @@ make test # test all
 | [#7](problem007)  | MEDIUM     | Facebook    | Message encoding                                             |
 | [#8](problem008)  | EASY       | Google      | Counting unival tree                                         |
 | [#9](problem009)  | HARD       | Airbnb      | Finding the largest sum of non-adjacent numbers              |
-| [#10](problem010) | MEDIUM     | Apple       |                                                              |
-| [#11](problem011) | MEDIUM     | Twitter     |                                                              |
-| [#12](problem012) | HARD       | Amazon      |                                                              |
+| [#10](problem010) | MEDIUM     | Apple       | Job scheduler                                                |
+| [#11](problem011) | MEDIUM     | Twitter     | Text autocompletion                                          |
+| [#12](problem012) | HARD       | Amazon      | Climbing stairs                                              |
 | [#13](problem013) | HARD       | Amazon      |                                                              |
 | [#14](problem014) | MEDIUM     | Google      |                                                              |
 | [#15](problem015) | MEDIUM     | Facebook    |                                                              |
@@ -88,3 +88,4 @@ make test # test all
 | [#64](problem064) | HARD       | Google      | Knight's tour on Chessboard                                  |
 | [#65](problem065) | EASY       | Amazon      | Clockwise matrix traverse                                    |
 | [#66](problem066) | MEDIUM     | Square      | Fair coin toss with a biased coin                            |
+| [#67](problem067) | HARD       | Google      | LFU cache                                                    |

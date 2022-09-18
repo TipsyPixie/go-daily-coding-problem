@@ -8,11 +8,11 @@ func Run(input string, distinctCharactersLimit uint) uint {
 		startingCharacter := []rune(input)[substringEndsAt]
 		characterCount[startingCharacter] += 1
 		for uint(len(characterCount)) > distinctCharactersLimit {
-			endingCharacter := []rune(input)[substringStartsAt]
-			if characterCount[endingCharacter] > 1 {
-				characterCount[endingCharacter]--
+			startingCharacter := []rune(input)[substringStartsAt]
+			if characterCount[startingCharacter] > 1 {
+				characterCount[startingCharacter]--
 			} else {
-				delete(characterCount, endingCharacter)
+				delete(characterCount, startingCharacter)
 			}
 			substringStartsAt++
 		}
